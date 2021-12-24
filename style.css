@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Muli",sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 50px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: all 700ms ease-in;
+}
+
+#panel-1{
+    background-image: url("https://newevolutiondesigns.com/images/freebies/animals-background-9.jpg");   
+}
+
+#panel-2{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/1024/106/499/giraffe-full-hd-wallpaper-preview.jpg");   
+}
+
+#panel-3{
+    background-image: url("https://www.desktopbackground.org/download/o/2015/08/18/997165_horse-high-resolution-wallpapers-full-hd-animal-wallpapers_1600x1200_h.jpg");   
+}
+
+#panel-4{
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/546/162/373/golden-retriever-puppy-backgrounds-lying-collar-wallpaper-preview.jpg");   
+}
+
+#panel-5{
+    background-image: url("https://wallpapercave.com/wp/TgPGjcV.jpg");   
+}
+
+
+
+.panel h3{
+    font-size: 25px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+
+@media (max-width: 480px) {
+    .container{
+        width: 100vw;
+    }
+
+    #panel-4,#panel-5{
+        display: none;
+    }
+    /* .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    } */
+}
